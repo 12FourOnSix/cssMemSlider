@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto Flex', sans-serif;
+}
+body {
+    background-color: #333;
+}
+.wrapper {
+    width: 55vw;
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    gap: 1.5rem;
+    overflow: hidden;
+}
+.image-container {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+    border-radius: 1rem;
+    overflow: hidden;
+    white-space: nowrap;
+}
+img {
+    display: inline-block;
+    object-fit: contain;
+    width: 100%;
+    border-radius: 1rem;
+}
+.move-in-img {
+    animation: .3s moveInImg linear;
+}
+@keyframes moveInImg {
+    from {
+      transform: translate3d(0%, 0%, 0rem);
+    }
+  
+    to {
+      transform: translate3d(-100%, 0%, 10rem);
+    }
+}
+.secondary-container {
+    display: flex;
+    align-items: center;
+}
+.image-title {
+    flex-grow: 1;
+}
+.title-inner {
+    font-size: 1.5rem;
+    color: beige;
+}
+.move-title {
+    animation: moveTitle .8s;
+}
+@keyframes moveTitle {
+    0% {transform: translateX(0%) scale(1);}
+    50% {transform: translateX(15%) scale(1.15); color: #5400ff;}
+    100% {transform: translateX(0%) scale(1);}
+}
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+}
+.control-item {
+    padding: .5rem .3rem;
+}
+.control-item-circle {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: .1rem solid #5400ff;
+    background-color: #5400ff;
+    transition: all .3s;
+}
+.control-item:hover {
+    cursor: pointer;
+}
+.control-item:hover > .control-item-circle {
+    border-color: beige;
+    background-color: beige;
+}
+.control-item.control-active > .control-item-circle,  
+.control-item.control-active:hover > .control-item-circle{
+    background-color: transparent;
+}
+.control-item:active > .control-item-circle {
+    opacity: 0.5;
+}
