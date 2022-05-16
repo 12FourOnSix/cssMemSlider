@@ -92,3 +92,52 @@ img {
 .control-item:active > .control-item-circle {
     opacity: 0.5;
 }
+
+@media  screen and (max-width: 1200px) {
+    .wrapper {
+        width: 70vw;
+    }
+    img, .image-container {
+        border-radius: .8rem;
+    }
+}
+@media  screen and (max-width: 768px) {
+    .wrapper {
+        width: 80vw;
+        gap: 1.3rem;
+    }
+    .title-inner {
+        font-size: 1.3rem;
+    }
+    img, .image-container {
+        border-radius: .6rem;
+    }
+}
+@media  screen and (max-width: 460px) {
+    .wrapper {
+        width: 95vw;
+        gap: 1rem;
+    }
+    .title-inner {
+        font-size: 1rem;
+    }
+    img, .image-container {
+        border-radius: .5rem;
+    }
+    .control-item-circle {
+        width: .8rem;
+        height: .8rem;
+    }
+}
+@media  screen and (max-width: 360px) {
+    .secondary-container {
+        flex-wrap: wrap;
+    }
+    .image-title {
+        order: 2;
+        width: 100%;
+    }
+    .wrapper, .secondary-container {
+        gap: .7rem;
+    }
+}
